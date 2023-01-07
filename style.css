@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* light and dark mode */
+
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
@@ -24,8 +26,11 @@
   --switch-bg: url(./assets/sun.svg);
 }
 
+/* body */
+
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -121,7 +126,7 @@ ul li a {
   padding: 16px 24px;
 
   background: var(--surface-color);
-  border: 1px solid var(--stroke-color);
+  outline: 1px solid var(--stroke-color);
   border-radius: 8px;
 
   backdrop-filter: blur(4px);
@@ -135,7 +140,7 @@ ul li a {
 
 ul li a:hover {
   background: var(--surface-color-hover);
-  border: 1.5px solid var(--text-color);
+  outline: 1.5px solid var(--text-color);
 }
 
 /* Social links */
@@ -164,8 +169,23 @@ ul li a:hover {
   padding: 16px;
 }
 
+/* footer */ 
+
 footer {
   text-align: center;
   padding: 24px 0;
   font-size: 14px;
 }
+
+/* media queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
